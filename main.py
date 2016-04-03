@@ -14,13 +14,13 @@ score = 0
 print('Hello, ' + name  + '\n')
 
 #this function uses the imported module to get a random number between 0 and 9
-def getNumber():
-    return randint(0,9)
+def getNumber(start, end):
+    return randint(start,end)
 
 #a loop to provide the player with 10 math problems
 for _ in range(10):
-    firstNumber = getNumber() # getting the numbers to be added together
-    secondNumber = getNumber()
+    firstNumber = getNumber(0,9) # getting the numbers to be added together
+    secondNumber = getNumber(0,9)
     # below we ask the player for their answer
     answer = input('What is the answer to ' + str(firstNumber) + ' + ' + str(secondNumber) + '? ')
     # generate the correct answer
