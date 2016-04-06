@@ -25,10 +25,10 @@ for _ in range(10):
     # below we ask the player for their answer
     answer = input('What is the answer to ' + str(first_number) + ' + ' + str(second_number) + '? ')
     # generate the correct answer
-    correctAnswer = first_number + second_number
+    correct_answer = first_number + second_number
 
     # here we validate that the answer provided was the correct answer and update the score
-    if int(answer) == correctAnswer:
+    if int(answer) == correct_answer:
         score += 1
         print('Good Job ' + name  + ', your score is ' + str(score) + '\n')
     else:
