@@ -20,12 +20,12 @@ def get_number(start, end):
 
 # a loop to provide the player with 10 math problems
 for _ in range(10):
-    firstNumber = get_number(0,9) # getting the numbers to be added together
-    secondNumber = get_number(0,9)
+    first_number = get_number(0, 9)  # getting the numbers to be added together
+    second_number = get_number(0, 9)
     # below we ask the player for their answer
-    answer = input('What is the answer to ' + str(firstNumber) + ' + ' + str(secondNumber) + '? ')
+    answer = input('What is the answer to ' + str(first_number) + ' + ' + str(second_number) + '? ')
     # generate the correct answer
-    correctAnswer = firstNumber + secondNumber
+    correctAnswer = first_number + second_number
 
     # here we validate that the answer provided was the correct answer and update the score
     if int(answer) == correctAnswer:
