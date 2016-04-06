@@ -86,23 +86,33 @@ class Game:
 #use input function to get the players name
 name = input('Hello, may I have your name? ')
 
+#create a new Player Object
 player = Player(name)
 
 #greet the player
 print('Hello, ' + player.getName()  + '\n')
 
+#create a new Game Object
 game = Game()
 
+#create a while loop to validate their input
 while True:
+    #ask them if they want to play
     play = input('Would you like to play a game? (Yes/No)')
+    #if their answer is not either yes or no require them to answer the question again
     if play.lower() not in ('yes','no'):
+        #let user know they need to put in a correct answer
         print('Please type either yes or no')
     else:
+        # if they did answer yes or no this will run
         if play.lower() == 'yes':
+            #if their answer was yes then we start the game
             game.startIteration()
+            #after one iteration of the game runs let them know how many correct answers they got and their time
             print('You have answered ' + str(game.getCorrectAnswers()) + ' right in ' + str(game.iterationTime()))
+            # would they like to play again
             play = input('Would you like to play a game? (Yes/No)')
-    
+        # if they said no they don't want to play again then break out of the validation loop
         if play.lower() == 'no' :
             print('Ok, maybe next time')
             break
