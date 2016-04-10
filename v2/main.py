@@ -1,8 +1,9 @@
 # A simple math addition game
 # tutorial at www.techwooten.com
- 
+
 # import random number generator
 from random import randint
+
 
 class Player:
     __score = 0
@@ -56,4 +57,3 @@ for _ in range(10):
     else:
         player.update_score(-1)
         print('Oh no! ' + player.get_name() + ', you got that answer wrong.  Your score is ' + str(player.get_score()) + '\n')#A simple math addition game
- 
