@@ -8,8 +8,7 @@ from random import randint
 class Player:
     __score = 0
     __name = ''
- 
-    
+
     def __init__(self, name):
         self.__score = 0
         self.__name = name
@@ -27,7 +26,6 @@ class Player:
         return self.__score
 
 
- 
 # use input function to get the players name
 name = input('Hello, may I have your name? ')    
     
@@ -56,4 +54,5 @@ for _ in range(10):
         print('Good Job ' + player.get_name()  + ', your score is ' + str(player.get_score()) + '\n')
     else:
         player.update_score(-1)
-        print('Oh no! ' + player.get_name() + ', you got that answer wrong.  Your score is ' + str(player.get_score()) + '\n')#A simple math addition game
+        print('Oh no! ' + player.get_name() + ', you got that answer wrong.  Your score is ' + str(player.get_score()) + '\n')
+
