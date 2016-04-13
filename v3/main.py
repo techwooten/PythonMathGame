@@ -3,7 +3,7 @@
 
 # import random number generator
 from random import randint
-import time
+
 
 class Player:
     __score = 0
@@ -26,10 +26,6 @@ class Player:
         return self.__score
 
 
-# this function uses the imported module to get a random number between 0 and 9
-def get_number(start, end):
-    return randint(start, end)
-
 # use input function to get the players name
 name = input('Hello, may I have your name? ')
 
@@ -38,6 +34,10 @@ player = Player(name)
 
 # greet the player
 print('Hello, ' + player.get_name()  + '\n')
+
+# this function uses the imported module to get a random number between 0 and 9
+def get_number(start, end):
+    return randint(start, end)
 
 # create a while loop to validate their input
 while True:
