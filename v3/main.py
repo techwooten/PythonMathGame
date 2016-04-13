@@ -50,7 +50,6 @@ while True:
     else:
         # if they did answer yes or no this will run
         if play.lower() == 'yes':
-            answer = 0
             for _ in range(10):
                 first_number = get_number(0,9) # getting the numbers to be added together
                 second_number = get_number(0,9)
