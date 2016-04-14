@@ -80,9 +80,9 @@ while True:
 
             play = input('Would you like to play a game? (Yes/No)')
             # if they said no they don't want to play again then break out of the validation loop
-            if play.lower() == 'no' :
-                print('Ok, maybe next time')
-                break
+        if play.lower() == 'no' :
+            print('Ok, maybe next time')
+            break
                  
 
 
