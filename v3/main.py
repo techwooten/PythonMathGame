@@ -78,7 +78,6 @@ while True:
                     print('Oh no! ' + player.get_name() + ', you got that answer wrong.  Your score is ' +
                           str(player.get_score()) + '\n')
 
-            play = input('Would you like to play a game? (Yes/No)')
             # if they said no they don't want to play again then break out of the validation loop
         if play.lower() == 'no' :
             print('Ok, maybe next time')
