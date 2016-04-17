@@ -61,8 +61,7 @@ while True:
 
             print("Good Job!, " + player.get_name() + ' answered ' +
                   player.get_correct_answers() +
-                  ' correct out of ' + player.get_total_questions()
-                  + ' in ' + player.get_total_time() + '.')
+                  ' correct out of ' + player.get_total_questions() + '.')
         # if they said no they don't want to play again then break out of the validation loop
         if play.lower() == 'no' :
             print('Ok, maybe next time')
