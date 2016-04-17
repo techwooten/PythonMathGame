@@ -14,6 +14,7 @@ player = Player(name)
 # greet the player
 print('Hello, ' + player.get_name()  + '\n')
 
+
 # this function uses the imported module to get a random number between 0 and 9
 def get_number(start, end):
     return randint(start, end)
@@ -29,10 +30,9 @@ while True:
     else:
         # if they did answer yes or no this will run
         if play.lower() == 'yes':
-            player.start_time()
             for _ in range(10):
-                first_number = get_number(0,9) # getting the numbers to be added together
-                second_number = get_number(0,9)
+                first_number = get_number(0, 9)  # getting the numbers to be added together
+                second_number = get_number(0, 9)
                 # below we ask the player for their answer
                 question = 'What is the answer to ' + str(first_number) + ' + ' + str(second_number) + '? '
                 bad_count = 0
@@ -53,13 +53,13 @@ while True:
                 # here we validate that the answer provided was the correct answer and update the score
                 if int(answer) == correct_answer:
                     player.update_score(1, True)
-                    print('Good Job ' + player.get_name()  + ', your score is ' + str(player.get_score()) + '\n')
+                    print('Good Job ' + player.get_name() + ', your score is ' + str(player.get_score()) + '\n')
                 else:
                     player.update_score(1, False)
                     print('Oh no! ' + player.get_name() + ', you got that answer wrong.  Your score is ' +
                           str(player.get_score()) + '\n')
-            player.pause_time()
-            print(player.get_name() + ' answered ' +
+
+            print("Good Job!, " + player.get_name() + ' answered ' +
                   player.get_correct_answers() +
                   ' correct out of ' + player.get_total_questions()
                   + ' in ' + player.get_total_time() + '.')

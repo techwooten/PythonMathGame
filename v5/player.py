@@ -4,6 +4,8 @@ import time
 class Player:
     __score = 0
     __name = ''
+    __total_time = 0.0
+    __start_time = 0.0
     __total_questions = 0
     __correct_answers = 0
 
@@ -19,6 +21,15 @@ class Player:
 
     def get_score(self):
         return self.__score
+
+    def start_time(self):
+        self.__start_time = time.time()
+
+    def pause_time(self):
+        self.__total_time += (time.time() - self.__start_time)
+
+    def get_total_time(self):
+        return str("%.2f" % self.__total_time) + " seconds"
 
     def update_score(self, score, correct):
         if correct:
